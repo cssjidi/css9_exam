@@ -25,5 +25,20 @@ class Css9_examModuleSite extends WeModuleSite {
 		$rid = intval($_GPC['id']);
 		echo $rid;
 	}
+	public function doWebExamSetting(){
 
+		include $this->template('examSetting');
+	}
+	public function doWebType(){
+
+		include $this->template('type');
+	}
+	public function doWebSubject(){
+		
+		include $this->template('subject');
+	}
+	public function doWebExamination(){
+		
+		include $this->template('examination');
+	}
 }
