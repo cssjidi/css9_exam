@@ -1,33 +1,68 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns="http://www.we7.cc" versionCode="">
-	<application setting='true'>
+	<application setting="true">
 		<name><![CDATA[在线考试录入试题系统]]></name>
 		<identifie><![CDATA[css9_exam]]></identifie>
-		<version><![CDATA[1.0.0]]></version>
+		<version><![CDATA[1.0.1]]></version>
+		<type><![CDATA[business]]></type>
 		<ability><![CDATA[在线考试录入试题系统]]></ability>
-		<type><![CDATA[activity]]></type>
 		<description><![CDATA[在线考试录入试题系统]]></description>
 		<author><![CDATA[css9]]></author>
-		<url><![CDATA[http://css9.com]]></url>
-		<setting><![CDATA[]]></setting>
+		<url><![CDATA[http://bbs.we7.cc/]]></url>
 	</application>
 	<platform>
+		<subscribes>
+			<message type="text" />
+			<message type="image" />
+			<message type="voice" />
+			<message type="video" />
+			<message type="location" />
+			<message type="link" />
+			<message type="subscribe" />
+			<message type="unsubscribe" />
+			<message type="qr" />
+			<message type="trace" />
+			<message type="click" />
+			<message type="enter" />
+		</subscribes>
+		<handles>
+			<message type="text" />
+			<message type="image" />
+			<message type="voice" />
+			<message type="video" />
+			<message type="location" />
+			<message type="link" />
+			<message type="subscribe" />
+			<message type="qr" />
+			<message type="trace" />
+			<message type="click" />
+			<message type="enter" />
+		</handles>
 		<rule embed="true" />
-		<supports>
-			<item type="app" />
-			<item type="wxapp" />
-			<item type="webapp" />
-			<item type="aliapp" />
-			<item type="xzapp" />
-		</supports>
 	</platform>
-	
 	<bindings>
-		
+		<cover call="getRuleMenus">
+			<entry title="在线考试系统首页" do="store" state="" direct="true" />
+		</cover>
+		<menu call="getMenus">
+			<entry title="题型管理" do="type" state="" direct="false" />
+			<entry title="科目管理" do="subject" state="" direct="false" />
+			<entry title="试题录入" do="examination" state="" direct="false" />
+			<entry title="考试设置" do="examSetting" state="" direct="false" />
+		</menu>
+		<home call="getHomes">
+			<entry title="便利店首页" do="store" state="" direct="true" />
+		</home>
+		<shortcut call="getShortcuts">
+			<entry title="便利店订单" do="orders" state="" direct="false" />
+		</shortcut>
+		<rule>
+			<entry title="规则" do="rule" state="" direct="false" />
+		</rule>
 	</bindings>
-	<install>
-		
-	</install>
-	<uninstall><![CDATA[]]></uninstall>
-	<upgrade><![CDATA[upgrade.php]]></upgrade>
+	<install><![CDATA[
+	]]></install>
+	<uninstall><![CDATA[
+	]]></uninstall>
+	<upgrade><![CDATA[]]></upgrade>
 </manifest>

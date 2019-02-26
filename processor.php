@@ -9,7 +9,6 @@ defined('IN_IA') or exit('Access Denied');
 class Css9_examModuleProcessor extends WeModuleProcessor {
 	
 	public function respond() {
-		global $_W;
 		
 	}
 }
