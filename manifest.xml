@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns="http://www.we7.cc" versionCode="">
+	<application setting='true'>
+		<name><![CDATA[在线考试录入试题系统]]></name>
+		<identifie><![CDATA[css9_exam]]></identifie>
+		<version><![CDATA[1.0.0]]></version>
+		<ability><![CDATA[在线考试录入试题系统]]></ability>
+		<type><![CDATA[activity]]></type>
+		<description><![CDATA[在线考试录入试题系统]]></description>
+		<author><![CDATA[css9]]></author>
+		<url><![CDATA[http://css9.com]]></url>
+		<setting><![CDATA[]]></setting>
+	</application>
+	<platform>
+		<rule embed="true" />
+		<supports>
+			<item type="app" />
+			<item type="wxapp" />
+			<item type="webapp" />
+			<item type="aliapp" />
+			<item type="xzapp" />
+		</supports>
+	</platform>
+	
+	<bindings>
+		
+	</bindings>
+	<install>
+		
+	</install>
+	<uninstall><![CDATA[]]></uninstall>
+	<upgrade><![CDATA[upgrade.php]]></upgrade>
+</manifest>
