@@ -16,29 +16,30 @@ class Css9_examModuleSite extends WeModuleSite {
 	public function __construct() {
 		global $_W;
 		$sql = 'SELECT `settings` FROM ' . tablename('uni_account_modules') . ' WHERE `uniacid` = :uniacid AND `module` = :module';
-		$settings = pdo_fetchcolumn($sql, array(':uniacid' => $_W['uniacid'], ':module' => 'cjd_css9_v1'));
+		$settings = pdo_fetchcolumn($sql, array(':uniacid' => $_W['uniacid'], ':module' => 'css9_exam'));
 		$this->settings = iunserializer($settings);
 	}
-
+	
 	public function doWebRule(){
 		global $_W, $_GPC;
 		$rid = intval($_GPC['id']);
 		echo $rid;
 	}
-	public function doWebExamSetting(){
 
-		include $this->template('examSetting');
+	public function doWebSubject() {
+
+		include $this->template('subject');
 	}
-	public function doWebType(){
+	public function doWebType() {
 
 		include $this->template('type');
 	}
-	public function doWebSubject(){
-		
-		include $this->template('subject');
+	public function doWebExamSetting() {
+
+		include $this->template('examSetting');
 	}
-	public function doWebExamination(){
-		
+	public function doWebExamination() {
+
 		include $this->template('examination');
 	}
 }
